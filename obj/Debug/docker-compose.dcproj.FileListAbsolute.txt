@@ -16,3 +16,4 @@ C:\Users\Admin\source\repos\PlatformService\bin\Debug\PlatformService.pdb
 C:\Users\Admin\source\repos\PlatformService\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\PlatformService\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\PlatformService\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Admin\Source\Repos\.NET-Microservices\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

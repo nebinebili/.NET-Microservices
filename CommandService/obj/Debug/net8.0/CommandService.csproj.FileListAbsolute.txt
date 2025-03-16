@@ -75,7 +75,6 @@ C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\s
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CommandService.props
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CommandService.props
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\CommandS.7DAE046B.Up2Date
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\CommandService.dll
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\refint\CommandService.dll
