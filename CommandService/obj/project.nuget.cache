@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HEpY1iF1D88=",
+  "dgSpecHash": "HN1n7pXfv5Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\CommandService.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\CommandService\\CommandService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
