@@ -81,3 +81,4 @@ C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\r
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\CommandService.pdb
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\CommandService.genruntimeconfig.cache
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\obj\Debug\net8.0\ref\CommandService.dll
+C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
