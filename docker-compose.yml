@@ -6,3 +6,11 @@ services:
     build:
       context: .
       dockerfile: PlatformService\Dockerfile
+
+
+  commandservice:
+    image: ${DOCKER_REGISTRY-}commandservice
+    build:
+      context: CommandService
+      dockerfile: Dockerfile
+
