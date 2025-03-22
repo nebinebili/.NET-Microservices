@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\commands-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:commands-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\platforms-np-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:platforms-np-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\platforms-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:platforms-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\ingress-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:ingress-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "platforms-np-srv.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\platforms-np-srv.yaml",
-              "RelativeDocumentMoniker": "platforms-np-srv.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\platforms-np-srv.yaml",
-              "RelativeToolTip": "platforms-np-srv.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-20T19:26:11.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "commands-depl.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\commands-depl.yaml",
-              "RelativeDocumentMoniker": "commands-depl.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\commands-depl.yaml",
-              "RelativeToolTip": "commands-depl.yaml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ingress-srv.yaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\ingress-srv.yaml",
+              "RelativeDocumentMoniker": "ingress-srv.yaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\ingress-srv.yaml",
+              "RelativeToolTip": "ingress-srv.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-20T19:26:01.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "platforms-depl.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\platforms-depl.yaml",
-              "RelativeDocumentMoniker": "platforms-depl.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\platforms-depl.yaml",
-              "RelativeToolTip": "platforms-depl.yaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-20T19:25:43.407Z",
+              "WhenOpened": "2025-03-20T22:51:29.184Z",
               "EditorCaption": ""
             }
           ]
