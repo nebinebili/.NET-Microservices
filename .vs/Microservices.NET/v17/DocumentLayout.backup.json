@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\ingress-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:ingress-srv.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\mssql-plat-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:mssql-plat-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\local-pvc.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:local-pvc.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ingress-srv.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\ingress-srv.yaml",
-              "RelativeDocumentMoniker": "ingress-srv.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\ingress-srv.yaml",
-              "RelativeToolTip": "ingress-srv.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "local-pvc.yaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\local-pvc.yaml",
+              "RelativeDocumentMoniker": "local-pvc.yaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\local-pvc.yaml",
+              "RelativeToolTip": "local-pvc.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-20T22:51:29.184Z",
+              "WhenOpened": "2025-03-24T21:38:03.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mssql-plat-depl.yaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\mssql-plat-depl.yaml",
+              "RelativeDocumentMoniker": "mssql-plat-depl.yaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\mssql-plat-depl.yaml",
+              "RelativeToolTip": "mssql-plat-depl.yaml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-03-23T21:08:02.956Z",
               "EditorCaption": ""
             }
           ]
