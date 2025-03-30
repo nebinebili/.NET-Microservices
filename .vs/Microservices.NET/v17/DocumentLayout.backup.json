@@ -30,7 +30,8 @@
               "RelativeToolTip": "local-pvc.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-24T21:38:03.488Z"
+              "WhenOpened": "2025-03-24T21:38:03.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +41,7 @@
               "RelativeDocumentMoniker": "mssql-plat-depl.yaml",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\mssql-plat-depl.yaml",
               "RelativeToolTip": "mssql-plat-depl.yaml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-03-23T21:08:02.956Z",
               "EditorCaption": ""
