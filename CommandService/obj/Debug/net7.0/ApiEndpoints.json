@@ -8,5 +8,114 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommandService.Controllers.CommandsController",
+    "Method": "GetCommandsForPLatform",
+    "RelativePath": "api/c/platforms/{platformId}/Commands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "platformId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CommandService.Dtos.CommandReadDto, CommandService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CommandService.Controllers.CommandsController",
+    "Method": "CreateCommandForPlatform",
+    "RelativePath": "api/c/platforms/{platformId}/Commands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "platformId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "commandCreateDto",
+        "Type": "CommandService.Dtos.CommandCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommandService.Dtos.CommandReadDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CommandService.Controllers.CommandsController",
+    "Method": "GetCommandForPlatform",
+    "RelativePath": "api/c/platforms/{platformId}/Commands/{commandId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "platformId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "commandId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommandService.Dtos.CommandReadDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCommandForPlatform"
+  },
+  {
+    "ContainingType": "CommandService.Controllers.PlatformsController",
+    "Method": "GetPLatforms",
+    "RelativePath": "api/c/Platforms/GetPlatforms",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CommandService.Dtos.PlatformReadDto, CommandService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
