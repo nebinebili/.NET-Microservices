@@ -246,3 +246,4 @@ C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\PlatformService.genruntimeconfig.cache
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\ref\PlatformService.dll
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\appsettings.Production.json
+C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\mssql-plat-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:mssql-plat-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\data\\commandrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\data\\commandrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\local-pvc.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:local-pvc.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\models\\platform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\models\\platform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "local-pvc.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\local-pvc.yaml",
-              "RelativeDocumentMoniker": "local-pvc.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\local-pvc.yaml",
-              "RelativeToolTip": "local-pvc.yaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-24T21:38:03.488Z",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "CommandService\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "CommandService\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T20:05:29.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "mssql-plat-depl.yaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\mssql-plat-depl.yaml",
-              "RelativeDocumentMoniker": "mssql-plat-depl.yaml",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\mssql-plat-depl.yaml",
-              "RelativeToolTip": "mssql-plat-depl.yaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-03-23T21:08:02.956Z",
+              "Title": "CommandRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\CommandRepo.cs",
+              "RelativeDocumentMoniker": "CommandService\\Data\\CommandRepo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\CommandRepo.cs",
+              "RelativeToolTip": "CommandService\\Data\\CommandRepo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T19:30:06.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Platform.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Models\\Platform.cs",
+              "RelativeDocumentMoniker": "CommandService\\Models\\Platform.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Models\\Platform.cs",
+              "RelativeToolTip": "CommandService\\Models\\Platform.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:48:54.824Z",
               "EditorCaption": ""
             }
           ]
