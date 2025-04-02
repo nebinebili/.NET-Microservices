@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\rabbitmq-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{173B5C61-3914-4F75-843E-4D72BC33F3EB}|K8S{173B5C61-3914-4F75-843E-4D72BC33F3EB}|solutionrelative:rabbitmq-depl.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CommandsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeDocumentMoniker": "CommandService\\Controllers\\CommandsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeToolTip": "CommandService\\Controllers\\CommandsController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAqwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T22:11:01.981Z",
+              "Title": "rabbitmq-depl.yaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\rabbitmq-depl.yaml",
+              "RelativeDocumentMoniker": "rabbitmq-depl.yaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\rabbitmq-depl.yaml",
+              "RelativeToolTip": "rabbitmq-depl.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-04-02T15:17:48.263Z",
               "EditorCaption": ""
             }
           ]
