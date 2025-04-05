@@ -75,10 +75,10 @@ C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\s
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.CommandService.props
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.CommandService.props
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\CommandS.7DAE046B.Up2Date
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\CommandService.dll
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\refint\CommandService.dll
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\CommandService.pdb
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\CommandService.genruntimeconfig.cache
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\ref\CommandService.dll
+C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\bin\Debug\net7.0\RabbitMQ.Client.dll

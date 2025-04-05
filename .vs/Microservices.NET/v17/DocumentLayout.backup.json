@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\controllers\\commandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CommandsController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeDocumentMoniker": "CommandService\\Controllers\\CommandsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Controllers\\CommandsController.cs",
-              "RelativeToolTip": "CommandService\\Controllers\\CommandsController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwEMAAAAAAAAAAAAAAA==",
+              "Title": "PlatformController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
+              "RelativeDocumentMoniker": "PlatformService\\Controllers\\PlatformController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
+              "RelativeToolTip": "PlatformService\\Controllers\\PlatformController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAE4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T22:11:01.981Z",
+              "WhenOpened": "2025-04-05T14:19:24.548Z",
               "EditorCaption": ""
             }
           ]
