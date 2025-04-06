@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\data\\commandrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\data\\commandrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\eventprocessing\\eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\eventprocessing\\eventprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\asyncdataservices\\messagebussubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\asyncdataservices\\messagebussubscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlatformController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
-              "RelativeDocumentMoniker": "PlatformService\\Controllers\\PlatformController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
-              "RelativeToolTip": "PlatformService\\Controllers\\PlatformController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAAE4AAAANAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Program.cs",
+              "RelativeDocumentMoniker": "CommandService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Program.cs",
+              "RelativeToolTip": "CommandService\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T14:19:24.548Z",
+              "WhenOpened": "2025-04-06T18:27:45.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommandRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\CommandRepo.cs",
+              "RelativeDocumentMoniker": "CommandService\\Data\\CommandRepo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Data\\CommandRepo.cs",
+              "RelativeToolTip": "CommandService\\Data\\CommandRepo.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T18:27:23.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageBusSubscriber.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\AsyncDataServices\\MessageBusSubscriber.cs",
+              "RelativeDocumentMoniker": "CommandService\\AsyncDataServices\\MessageBusSubscriber.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\AsyncDataServices\\MessageBusSubscriber.cs",
+              "RelativeToolTip": "CommandService\\AsyncDataServices\\MessageBusSubscriber.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T18:11:03.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventProcessor.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\EventProcessing\\EventProcessor.cs",
+              "RelativeDocumentMoniker": "CommandService\\EventProcessing\\EventProcessor.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\EventProcessing\\EventProcessor.cs",
+              "RelativeToolTip": "CommandService\\EventProcessing\\EventProcessor.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T20:04:25.678Z",
               "EditorCaption": ""
             }
           ]
