@@ -45,7 +45,7 @@ namespace PlatformService.AsyncDataServices
 
             if (_connection.IsOpen) 
             {
-                Console.WriteLine("-->RabbirMQ Connection Open,sending message...");
+                Console.WriteLine("-->RabbitMQ Connection Open,sending message...");
                 SendMessage(message);
             }
             else
