@@ -65,7 +65,7 @@ namespace PlatformService.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"--> Could not send synchronously:{ex.Message}");
+                Console.WriteLine($"--> Could not send synchronously:{ex.Message}!");
             }
 
             /// Send Async Message
@@ -74,7 +74,7 @@ namespace PlatformService.Controllers
             {
                 var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
 
-                platformPublishedDto.Event = "Platform_Published";
+                platformPublishedDto.Event = "Platform_Publishedd";
                 _messageBusClient.PublishNewPlatform(platformPublishedDto);
             }
             catch (Exception ex)
