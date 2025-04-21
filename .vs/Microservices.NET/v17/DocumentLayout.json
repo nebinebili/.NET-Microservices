@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "platforms.proto",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Protos\\platforms.proto",
+              "RelativeDocumentMoniker": "PlatformService\\Protos\\platforms.proto",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Protos\\platforms.proto",
+              "RelativeToolTip": "PlatformService\\Protos\\platforms.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-04-21T21:14:12.129Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

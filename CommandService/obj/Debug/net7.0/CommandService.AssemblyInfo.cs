@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommandService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b97060e3f518eaf42787b6eaa9f99833ebfd6ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+407db6fda7233af61565eb4a3676d67086a8f869")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommandService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommandService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

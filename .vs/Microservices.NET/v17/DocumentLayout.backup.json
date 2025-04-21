@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\asyncdataservices\\messagebusclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\controllers\\platformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,22 +28,22 @@
               "RelativeDocumentMoniker": "PlatformService\\AsyncDataServices\\MessageBusClient.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\AsyncDataServices\\MessageBusClient.cs",
               "RelativeToolTip": "PlatformService\\AsyncDataServices\\MessageBusClient.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T18:32:12.313Z",
+              "WhenOpened": "2025-04-20T12:33:45.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlatformController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
-              "RelativeDocumentMoniker": "PlatformService\\Controllers\\PlatformController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Controllers\\PlatformController.cs",
-              "RelativeToolTip": "PlatformService\\Controllers\\PlatformController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAMwFgAAAAIAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Program.cs",
+              "RelativeDocumentMoniker": "PlatformService\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Program.cs",
+              "RelativeToolTip": "PlatformService\\Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T18:26:50.97Z",
+              "WhenOpened": "2025-04-20T12:33:23.927Z",
               "EditorCaption": ""
             }
           ]

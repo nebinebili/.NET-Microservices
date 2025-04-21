@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6zHHtBtGqhk=",
+  "dgSpecHash": "uyZpuWj4/cg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\.NET-Microservices\\CommandService\\CommandService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,11 @@
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\google.protobuf\\3.30.2\\google.protobuf.3.30.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\grpc.core.api\\2.70.0\\grpc.core.api.2.70.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\grpc.net.client\\2.70.0\\grpc.net.client.2.70.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\grpc.net.common\\2.70.0\\grpc.net.common.2.70.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\grpc.tools\\2.71.0\\grpc.tools.2.71.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.20\\microsoft.aspnetcore.openapi.7.0.20.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

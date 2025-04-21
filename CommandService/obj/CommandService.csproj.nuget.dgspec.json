@@ -54,6 +54,20 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.30.2, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.70.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.20, )"
