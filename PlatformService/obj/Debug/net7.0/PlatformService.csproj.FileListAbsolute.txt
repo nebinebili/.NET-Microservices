@@ -247,3 +247,10 @@ C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\obj\Debug\net7.0\ref\PlatformService.dll
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\appsettings.Production.json
 C:\Users\Admin\Source\Repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\RabbitMQ.Client.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\Admin\source\repos\.NET-Microservices\PlatformService\bin\Debug\net7.0\Grpc.Net.Common.dll

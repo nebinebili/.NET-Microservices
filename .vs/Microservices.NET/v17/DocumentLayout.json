@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\platformservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{BB043007-526D-4C58-B394-D3549E425089}|PlatformService\\PlatformService.csproj|solutionrelative:platformservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\syncdataservices\\grpc\\platformdataclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\syncdataservices\\grpc\\platformdataclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\protos\\platforms.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|c:\\users\\admin\\source\\repos\\.net-microservices\\commandservice\\syncdataservices\\grpc\\iplatformdataclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{985E5F7B-F654-4782-A700-CB44F4973F1F}|CommandService\\CommandService.csproj|solutionrelative:commandservice\\syncdataservices\\grpc\\iplatformdataclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "platforms.proto",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Protos\\platforms.proto",
-              "RelativeDocumentMoniker": "PlatformService\\Protos\\platforms.proto",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\PlatformService\\Protos\\platforms.proto",
-              "RelativeToolTip": "PlatformService\\Protos\\platforms.proto",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Protos\\platforms.proto",
+              "RelativeDocumentMoniker": "CommandService\\Protos\\platforms.proto",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\Protos\\platforms.proto",
+              "RelativeToolTip": "CommandService\\Protos\\platforms.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
-              "WhenOpened": "2025-04-21T21:14:12.129Z",
+              "WhenOpened": "2025-04-22T19:21:54.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlatformDataClient.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\SyncDataServices\\Grpc\\PlatformDataClient.cs",
+              "RelativeDocumentMoniker": "CommandService\\SyncDataServices\\Grpc\\PlatformDataClient.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\SyncDataServices\\Grpc\\PlatformDataClient.cs",
+              "RelativeToolTip": "CommandService\\SyncDataServices\\Grpc\\PlatformDataClient.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T19:09:01.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPlatformDataClient.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\SyncDataServices\\Grpc\\IPlatformDataClient.cs",
+              "RelativeDocumentMoniker": "CommandService\\SyncDataServices\\Grpc\\IPlatformDataClient.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\.NET-Microservices\\CommandService\\SyncDataServices\\Grpc\\IPlatformDataClient.cs",
+              "RelativeToolTip": "CommandService\\SyncDataServices\\Grpc\\IPlatformDataClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T19:07:09.086Z",
               "EditorCaption": ""
             }
           ]
