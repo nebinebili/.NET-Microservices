@@ -83,3 +83,8 @@ C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\C
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\ref\CommandService.dll
 C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\Admin\source\repos\.NET-Microservices\CommandService\bin\Debug\net7.0\appsettings.Production.json
+C:\Users\Admin\source\repos\.NET-Microservices\CommandService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\Admin\source\repos\.NET-Microservices\CommandService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Admin\source\repos\.NET-Microservices\CommandService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\Admin\source\repos\.NET-Microservices\CommandService\bin\Debug\net7.0\Grpc.Net.Common.dll
+C:\Users\Admin\Source\Repos\.NET-Microservices\CommandService\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
