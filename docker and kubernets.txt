@@ -1,0 +1,549 @@
+
+cd C:\Users\Admin\source\repos\.NET-Microservices\PlatformService
+docker-compose down
+docker-compose up --build
+
+kubectl exec -it <pod-name> -- ls /app
+
+kubectl logs platforms-depl-bcd89dc7b-dd5dz -c platformservice
+
+kubectl describe svc <service-name>
+
+minikube service my-service --url
+
+docker exec -it ad86939f0c53 sh
+docker logs ad86939f0c53
+
+curl http://localhost:8080/api/Platform/
+
+ C:\Users\Admin\Source\Repos\.NET-Microservices
+
+---------- Docker islemese bunu ele--------------------------
+
+bu iki command powershellde isledin dockernan bagli seyleri bagliyirsan:
+Get-Service | Where-Object { $_.Name -like "*docker*" } | Stop-Service -Force
+wsl --unregister docker-desktop
+bunnan da yoxluyursan baglanib ya yox:
+wsl -l -v
+
+--------------------------------------------------------------------------------------Docker---------------------------------------------------------------------------------------------
+1️⃣ Docker Image → Tətbiqin bütün asılılıqları ilə birlikdə saxlanılan hazır şablon.
+2️⃣ Docker Container → Docker image-dən yaradılan və real vaxtda işləyən tətbiq mühiti.
+3️⃣ Dockerfile → Docker image yaratmaq üçün istifadə olunan skript faylı.
+4️⃣ Docker Hub → Hazır image-lərin saxlanıldığı mərkəzi repozitoriya.
+
+imageler bir nov setup rolu oynuyur,proqramin ozunu qaldirdiqda container sayilir.Meselen biz terminalda: docker pull ubuntu yazdiqda image yuklenir.
+docker run ubuntu yazdiqda ise ubuntu container ise dusur.
+
+
+Terminalda yazib yoxluya bilersen:
+1.docker pull mongo-mongo imagesi docker-a yukluyur
+2.docker images-imagesleri gosterir
+3.docker run mongo-mongo container ise dusur
+4.docker ps-ayaqda olan conatinerleri gosterir
+5.docker ps -a-kecmis conatinerleri gosterir
+6.docker run -it --name bash_ubuntu ubuntu- bu command ile conatinere ad verirsen --name(ad)
+7.docker start bash_ubuntu- burda bash_ubuntu container start olur
+8.docker stop bash_ubuntu- burda bash_ubuntu container stop olur,id ilede stop elemek olar.
+9.docker rm id- conatineri id ve ya ad da yazib sile bilersiz
+10.docker container rm $(docker container ls -aq)-butun containerleri silir
+11,docker run -d mongo-detach mode ile arxa planda isleyir
+12.docker inspect id ve ya name-container ve ya imagein melumatlarini gosterir
+
+
+----------------Praktika hissesi yeni kod hissesi-------------------
+
+1.docker build -t myapp .--->image yaratmaq ucun eger bu islemerse asagidaki command komek edecek.
+2.docker build -t nabili/platformservice -f ./PlatformService/Dockerfile .---->burada birbasa dockerfilein yerini gostererek emeliyyati yerine yetiririk.
+3.docker run -p 8080:80 -d nabili/platformservice ----> bu command container i 8080 portunda ise salir(her defe isletdikde yenisi yaranir)
+4.docker push -------> komandası Docker image Docker Hub və ya digər registry-lərə yükləmək üçün istifadə olunur.Bu əmrlə image paylaşa bilər, başqalarına istifadə etməyə imkan verə bilərsiniz.
+
+-----------------------------------------------------------------------------Kubernetes--------------------------------------------------------------------------------------------------
+
+Kubernetes (qısaca K8s), Docker və digər konteynerləri avtomatik idarə edən açıq mənbə (open-source) orkestrasiya sistemidir.
+
+Bir cümlə ilə: Kubernetes, bir çox konteyneri avtomatik idarə edən, miqyaslandıran və yerləşdirən bir sistemdir.
+
+🔹 Docker konteynerlərini idarə etmək üçün istifadə olunur.
+🔹 Avtomatik miqyaslandırma, yük balanslama və səhvləri bərpa etmə kimi funksiyaları var.
+🔹 Mikroservis memarlığında geniş istifadə olunur.
+
+----------------Praktika hissesi yeni kod hissesi-------------------
+
+app de kubernet aktiv etme ucun deploymentin konfiqurasiyalari oldugu yaml file yazilir sonra terminalda bu kod ise salinir(platforms-depl.yaml hemin yaml faylin adidi):
+1.kubectl apply -f platforms-depl.yaml--->Bu ise salindiqda kubernetde pod yaranir
+2.kubectl get deployment--->Kubernetes klasterinizdəki Deployment resurslarını göstərir
+3.kubectl get pods--->Kubernetes klasterində çalışan bütün Pod-ların siyahısını göstərir.
+4.kubectl delete deployments platforms-depl--->Deployment silmek ucundur
+
+Hal hazirda Apideki melumatlar el catan deyil bunun ucun Service yaml yazilir:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: platformnpservice-srv
+spec:
+  type: NodePort
+  selector:
+    app: platformservice 
+  ports:
+    - name: platformservice
+      protocol: TCP
+      port: 80
+      targetPort: 80
+5.kubectl apply -f platforms-np-srv.yaml-->bunu apply edirsen
+6.kubectl get services-->bunun vasitesi ile service melumatlari cixir ve baxib portunu goturub postmanda urlde yazib ise salirsan
+
+Bu bir defe yazilir ve qalici olur.Demeli ilk defe service.yaml faylini elave etdikde bir pod yarandi ve meni maraqlandiran bu olduki deployment yaml elave etdikde pod yaranirdi 
+amma maelumatalara cata bilmirdim indi bu service.yaml elave etdikde pod yarandi ve men bunun uzerinden melumatlara catdim.Fikirlesdim ki men portu birbasa deployment.yaml de qeyd edim 
+ve ordan birbasa yaranan podnan isimi gorum ve melumatlarada catim.Arasdirdim ve gordum ki deployment.yaml faylin icinde port yazsan ne olur:
+Pod-un içində port açılır, amma bu porta yalnız klaster içindəki digər pod-lar çata bilər.Xarici müştərilər (Postman, browser və s.) bu porta çata bilmir.
+💡 Buna görə də Service yaratmaq lazımdır.
+Service olmadan pod-a birbaşa qoşulmaq mümkün deyil.
+
+Sonda ise arasdirib onuda oyrendim ki ilk defe service.yaml add etdikde yaranan podu service.yaml yaratmiyib.O yarada bilmez men kubectl get pods,kubectl get deployments 
+yoxlayib gormusdum ki bosdu amma sistemde bu bir defe yaranib silindiyne gore sistemde qalib hardasa.
+🚀Netice:Yəni Service apply edəndə podun birdən yaranmasının əsl səbəbi Deployment-in sistemdə qalıb pod-u yenidən yaratması olub!
+
+
+
+---------------------------------------------------------------------Nginx-----------------------------------------------------------------------------------------
+
+
+Nginx yüksek performanslı reverse proxy, load balancer və web serverdir, əsasən trafiki yönləndirmək, yükü bölüşdürmək və təhlükəsizliyi artırmaq üçün istifadə olunur. Kubernetes-də isə Ingress Controller kimi işləyərək xarici sorğuları daxili servislərə yönləndirir. 
+
+✅ Əgər sadəcə bir server üçün proxy və load balancing lazımdırsa, adi Nginx istifadə edə bilərsən.
+✅ Əgər Kubernetes-də Ingress qaydaları ilə trafiki yönləndirmək istəyirsənsə, Ingress Nginx lazımdır.
+
+Yəni, Ingress Nginx = Kubernetes üçün optimallaşdırılmış Nginx versiyasıdır. 🚀
+
+Xüsusiyyət	                         Nginx	                                                    Ingress Nginx
+Standalone işləyir?	       Bəli, Kubernetes olmadan işləyə bilər	                            Yox, Kubernetes klasterinə bağlıdır
+Kubernetes dəstəyi	       Yoxdur, YAML və Ingress qaydalarını anlamır	                    Kubernetes Ingress qaydaları ilə işləyir
+Trafik yönləndirmə	       Manual olaraq Nginx config faylı ilə edilir	                    Ingress resurslarından avtomatik konfiqurasiya alır
+Reverse Proxy &	               Var, amma əl ilə konfiqurasiya lazımdır	                            Kubernetes servisləri üçün avtomatik edir
+Load Balancing
+
+
+-------Praktika hissesi ve kod hissesi----------------------
+
+Ingress nginx app-e qurmaq ucun google da Ingress nginx qeyd etdikden sonra GitHub hesabi cixacaq ve start documentation edib ordan yuklemek mumkundur. 
+
+Yazdigim appde ne etdim:
+Compda olan host file tapdim ve icinde 127.0.0.1 acme.com yazdım ki, kompüterdə acme.com domeni localhost-a yönlənsin.Fayl: C:\Windows\System32\drivers\etc\hosts
+Daha sonra ingress-srv.yaml faylında Ingress qaydaları yaratmısınız ki, gələn sorğular Nginx tərəfindən düzgün xidmətlərə yönləndirilsin.
+Filein ici:
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: acme.com
+      http:
+        paths:
+          - path: /api/platform/GetAllPlatforms
+            pathType: Prefix
+            backend:
+              service:
+                name: platforms-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/c/platforms
+            pathType: Prefix
+            backend:
+              service:
+                name: commands-clusterip-srv
+                port:
+                  number: 80
+
+
+Terminalda lazim olan commandlar nginx ucun:
+
+1.kubectl get namespace
+2.kubectl get pods --namespace=ingress-nginx
+3.kubectl get services --namespace=ingress-nginx
+4.kubectl apply -f ingress-srv.yaml
+5.kubectl delete -f ingress-srv.yaml
+
+Daha sonra neticeni yoxlamaq ucun Postmanda sorgu gonderilir acme.com domain ile birlikde:http://acme.com/api/platform/GetAllPlatforms
+
+Belelikler melumatlara catmaq ucun Nodeport(Yuxarida qeyd etdiyimiz usul) ve Ingress Nginx istifade etdik.BUnlarin ferqine baxin ve qerari ozun ver:)
+
+
+Xüsusiyyət	                                   NodePort	                                            Nginx Ingress
+Xarici dünyaya açılma	                      Hər pod üçün bir port açır	                            Tək bir giriş nöqtəsi (domain-based yönləndirmə)
+URL strukturu	                              http://localhost:30632/api/platforms (port lazımdır)	    http://acme.com/api/platforms (port yoxdur, sadədir)
+Load Balancing	                              Yoxdur (yalnız bir node-a bağlıdır)	                    Var (Nginx özü yükü paylayır)
+Security & SSL Support	                      Çox zəifdir, HTTPS üçün əl ilə konfiqurasiya lazımdır	    SSL termination və security imkanları var
+Routing (yönləndirmə)	                      Hər servisin öz portu var	                                    Tək bir domain üzərindən fərqli servislərə keçid mümkündür
+Enterprise Use Case	                      Kiçik test mühitləri üçün uyğundur	                    Böyük layihələrdə istifadə olunur
+
+🚀 Əgər artıq Nginx Ingress istifadə edirsənsə, NodePort-a ehtiyac yoxdur!
+💡 NodePort sadəcə development və test üçün istifadə edilə bilər, amma real sistemdə və production-da Nginx daha güclü və rahatdır.
+Yəni, sən artıq Nginx Ingress istifadə edirsənsə, bütün servislər üçün rahat və təhlükəsiz bir giriş nöqtən var, ona görə də NodePort-a ehtiyac yoxdur. 😊✅
+
+
+---------------------------------------Persistent Volume Claim----------------------------------
+Kubernetes-də podlar stateless (davamlı məlumat saxlamayan) şəkildə işləyir. Yəni pod silindikdə və ya restart olduqda onun daxili diskindəki məlumatlar silinir.
+MSSQL kimi bir verilənlər bazasında isə məlumatların itməsi qəbuledilməzdir.
+
+🔹 Persistent Volume (PV) – Fiziki və ya bulud əsaslı yaddaş sahəsidir.
+🔹 Persistent Volume Claim (PVC) – Podların bu yaddaşa qoşulmasını təmin edən resursdur.
+
+💡 Qısaca desək:
+
+PVC, podun disk yaddaşı üçün rezervasiya etdiyi bir tələblikdir.
+
+PVC olmadan pod hər restartda boş bir disk ilə başlayır və əvvəlki məlumatlar itir.
+
+PVC pod restart olsa belə məlumatları qoruyur.
+
+MSSQL Server öz database.mdf və log.ldf fayllarını diskdə saxlayır.
+Əgər PVC istifadə olunmazsa, pod silindikdə və ya restart olduqda:
+
+Bütün verilənlər bazası silinir.
+
+MSSQL hər dəfə yeni boş bir baza ilə başlayır.
+
+Məlumat itkisinin qarşısını almaq olmur.
+
+PVC sayəsində: ✅ MSSQL Server-in məlumatları qorunur.
+✅ Pod restart olsa belə məlumatlar qalır.
+✅ Kubernetes Stateful bir sistem kimi davranır.
+
+🔹 PVC, podun verilənlər bazasını restart və ya pod silindikdə belə qoruyur.
+🔹 Məlumatları saxlamaq üçün disk resursu ayırır.
+🔹 PVC olmadan MSSQL hər restartda boş bir verilənlər bazası ilə başlayar.
+
+✅ Əgər Kubernetes-də MSSQL işlədirsənsə, PVC istifadə etməyin mütləqdir! 🚀
+
+------------------------------------------Praktika Kod hissesi--------------------------------------------
+local-pvc.yaml:
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mssql-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Mi
+
+bunu apply persistent volume claim yaranir
+
+1.kubectl get pvc-pvc ya baxmaq ucun
+
+MSSQL-in add edilmesi:
+
+mssql-plat-depl.yaml:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+    spec:
+      containers:
+        - name: mssql
+          image: mcr.microsoft.com/mssql/server:2017-latest
+          ports:
+            - containerPort: 1433
+          env:
+          - name: MSSQL_PID
+            value: "Express"
+          - name: ACCEPT_EULA
+            value: "Y"
+          - name: SA_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mssql
+                key: SA_PASSWORD
+          volumeMounts: 
+          - mountPath: /var/opt/mssql/data
+            name: mssqldb
+      volumes: 
+      - name: mssqldb
+        persistentVolumeClaim:
+          claimName: mssql-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: mssql
+  ports:
+  - name: mssql
+    protocol: TCP
+    port: 1433
+    targetPort: 1433
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: mssql
+  ports: 
+  - protocol: TCP
+    port: 1433
+    targetPort: 1433
+
+2.kubectl create secret generic mssql --from-literal=SA_PASSWORD="besiktas1903"-bu secretKeyRef hissesidi
+3.kubectl apply-f mssql-plat-depl.yaml-bu fayl elave edilir
+4.dotnet ef migrations add initialmigration-migration yaradilir
+
+
+----------------------------------------------------------- RabbitMQ--------------------------------------------------------------------------------
+RabbitMQ, açıq mənbəli mesaj brokeridir. Mesaj brokerləri, müxtəlif sistemlərin bir-biri ilə məlumatlarını mübadilə etməsinə kömək edir. RabbitMQ, AMQP (Advanced Message Queuing Protocol)’un standartlaşdırılması ilə uyğunlaşır və bu protokol vasitəsilə müxtəlif proqramlar və platformalar arasında asinxron mesajlaşma imkanı yaradır.
+
+RabbitMQ’nun “Publisher-Exchange-Queue-Consumer” modeli, mesajların necə daşındığı və işlədiyi haqqında anlayışlardır.
+
+1. Publisher — Mesajları göndərən sistem və ya servisdir. Publisher vasitəsi ilə mesajlar müəyyən Exchange’ə yönləndirilir.
+
+2. Exchange — Mesajları alır və bunları lazımi Queue’lərə kateqoriyalara ayıraraq yönləndirir. Bu kateqoriyaları da Exchange Type olaraq adlandırırıq (Aşağıda izahı verilir)
+
+3. Queue — Mesajın müvəqqəti olaraq saxlandığı depodur.
+
+4. Consumer — Mesajları alan və lazımi işləri üzərində tətbiq edən sistem və ya servisdir.
+
+Mesajın Publisher’dən RabbitMQ’yə göndərilməsi və RabbitMQ’dən Consumer’ə göndərilməsi zamanı Channel anlayışından istifadə olunur. Bir sözlə Channel vasitəsi ilə RabbitMQ’lə əlaqə yaradaraq mesaj göndərib ala bilərik. Hər Channel, bir Queue və ya Exchange ilə əlaqələndirilib müəyyən kanal üzərindən göndərilə bilər
+
+//Exchange Types
+
+Exchange Type’lərin nə olduğunu aydınlaşdırmaq üçün əvvəlcə Routing Key’in nə olduğuna nəzər salaq
+
+Routing Key: Mesajları müəyyən Exchange’dən müəyyən Queue’yə yönləndirmək üçün istifadə olunan bir parametrdir.
+
+3 növ Exchange Type vardır:
+
+1. Direct Exchange — Mesajları Routing Key’ə görə konkret Queue’lərə yönləndirir. Consumer bu Queue’yə görə işini görür.
+
+2. Fanout Exchange — Bütün Queue’lərə mesajların kopyalarını göndərir Routing Key istifadə olunanları isə göndərməyib göz ardı edir. Bu növ mesajların birdən çox alıcı tərəfindən alınacağı təqdirdə istifadə edilir.
+
+3. Topic Exchange: Burada verilən Routing Key’lərə uyğun olaraq fərqli fərqli Queue’lərə yazmaq olur. Routing Key’lər bir və ya birdən çox “wildcard” simvolu istifadə edib bir neçə Queue yə yönləndirilə bilər. ”*” və ya “#” ilə hər hansısa qrupa və ya bütün mesajlara çatmaq olur. Bu növ, mesajı fərqli-fərqli kateqoriyalara ayırmaq lazım olduqda istifadə olunur.
+
+------------------------------------------------Praktika Kod Hissesi -------------------------------------------------------------
+rabbitmq-depl.yaml:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+  template:
+    metadata:
+      labels:
+        app: rabbitmq
+    spec:
+      containers:
+        - name: rabbitmq
+          image: rabbitmq:3-management
+          ports:
+            - containerPort: 15672
+              name: rbmq-mgmt-port
+            - containerPort: 5672
+              name: rbmq-msg-port
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: rabbitmq
+  ports:
+  - name: rbmq-mgmt-port
+    protocol: TCP
+    port: 15672
+    targetPort: 15672
+  - name: rbmq-msg-port
+    protocol: TCP
+    port: 5672
+    targetPort: 5672
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: rabbitmq
+  ports: 
+  - name: rbmq-mgmt-port
+    protocol: TCP
+    port: 15672
+    targetPort: 15672
+  - name: rbmq-msg-port
+    protocol: TCP
+    port: 5672
+    targetPort: 5672
+
+
+
+---------------------------------------------------------------------------Event Processing --------------------------------------------------------------
+
+Event nədir, nə üçün istifadə olunur?
+Sadə dillə:
+Event – sistemdə baş verən bir hadisəni bildirmək üçün istifadə olunur.
+Məsələn: “Yeni platforma yaradıldı” – bu bir event-dir.
+
+Bir servis (məsələn PlatformService) deyir:
+
+“Mən yeni bir platforma yaratdım!”
+Və bunu event şəklində Platform_Published adı ilə göndərir.
+
+Digər servis (məsələn CommandService) isə bu event-i qulaq asır və deyir:
+
+“Aha, yeni platforma yaradılıb? Mən də bunu öz bazama əlavə edim.”
+
+Bu kodun məqsədi:
+
+Başqa bir servisdən gələn event mesajlarını dinləmək (yəni sistemdə nəsə baş verdiyini bilmək).
+
+O mesajın tipini müəyyən etmək (məsələn: Platform_Published).
+
+Əgər tanınan bir eventdirsə, ona uyğun əməliyyat görmək (məsələn: DB-yə platformanı əlavə etmək).
+
+
+----------------------------------------------------------------------------GRPC-----------------------------------------------------------------------------------------
+gRPC — "Google Remote Procedure Call" deməkdir.
+Google tərəfindən yaradılıb və mikroservislər arasında sürətli və effektiv ünsiyyət üçün istifadə olunur.
+
+Yəni bir servis, başqa bir servisdə olan funksiyanı sanki lokal funksiyadırmış kimi çağırır.
+
+🎯gRPC-nin məqsədi nədir?
+Servislər arasında yüksək performanslı əlaqə qurmaq
+
+Kiçik ölçülü və tez cavab verən məlumat mübadiləsi
+
+Real-time ünsiyyət üçün daha uyğun olmaq (bidirectional streaming və s.)
+
+
+⚙️ Texniki əsaslar
+Məlumatlar Protocol Buffers (protobuf) formatında göndərilir → JSON-dan daha sürətlidir və daha az yer tutur.
+
+HTTP/2 istifadə edir → paralel bağlantılar, daha az gecikmə, daha çox sürət.
+
+Dəstəklədiyi dillər: C#, Java, Go, Python və s.
+
+
+
+🔍 Digər servis modelləri ilə fərqləri
+
+Xüsusiyyət	               gRPC	                        REST API / HTTP	                           RabbitMQ / Kafka (Message Queue)
+Ünsiyyət tipi	           Sinxron / Stream	               Sinxron (request/response)	             Asinxron (mesaj əsaslı)
+Məlumat formatı	          Protobuf (binary, yüngül)	       JSON (text, daha ağır)	                  Mesaj (istənilən format ola bilər)
+Sürət	                    Çox yüksək	                            Orta	                          Yüksək (amma gecikməli ola bilər)
+Əsas istifadə sahəsi	Mikroservis-to-mikroservis	      Web API-lər, açıq interfeyslər	            Asinxron işlər, data paylaşımı
+
+
+gRPC - Sinxron/Stream
+gRPC, həm sinxron, həm də streaming ünsiyyətini dəstəkləyən bir protokoldur. Bu xüsusiyyətlər aşağıdakı şəkildə izah edilə bilər:
+
+Sinxron (Blocking):
+
+Bu halda, müştəri sorğu göndərir və cavabı alana qədər növbəti əməliyyata keçmir. Bu, adətən sadə API çağırışları üçün istifadə olunur. Məsələn, bir məlumat sorğusunu göndərmək və dərhal cavab almaq.
+
+Məsələn: Müştəri serverə sorğu göndərir və nəticəni gözləyir (bloklanır) — bu zaman müştəri başqa heç bir əməliyyat yerinə yetirə bilmir.
+
+Stream (Asinxron və ya Sinxron Stream):
+
+gRPC həmçinin streaming ünsiyyətini dəstəkləyir. Burada, müştəri və server arasında məlumatın ardıcıl şəkildə ötürülməsi baş verir. Bu, böyük verilənlərin və ya uzun davam edən əməliyyatların səmərəli ötürülməsi üçün istifadə olunur.
+
+Streaming, müştəri və server arasında davamlı və asinxron məlumat ötürülməsi imkanı verir, yəni hər iki tərəf bir-birinin cavablarını gözləmədən paralel işləyə bilər.
+
+Streaming, gRPC'nin bir üstünlüyüdür, çünki tək bir əlaqə üzərindən çoxlu verilənləri ötürmək mümkündür. Bu xüsusiyyət, məsələn, real-time tətbiqlərdə, video və ya audio axınları kimi böyük verilənlərin göndərilməsi üçün əhəmiyyətlidir.
+
+Məsələn, gRPC istifadə edərək server və müştəri arasında bir neçə fərqli ssenari ilə əlaqə qurula bilər:
+
+Sinxron çağırış: Müştəri sorğu göndərir, server cavab verir və müştəri cavabı alana qədər gözləyir.
+
+Server Streaming: Müştəri bir sorğu göndərir və server bu sorğuya qarşılıq olaraq ardıcıl məlumat axınını (stream) göndərir.
+
+Client Streaming: Müştəri bir neçə sorğu göndərir və server yalnız axın bitdikdən sonra cavab verir.
+
+Bidirectional Streaming: Müştəri və server eyni vaxtda axın üzərindən məlumat göndərir və alır.
+
+
+gRPC nə zaman istifadə olunur?
+Mikroservis arxitekturasında servis-to-servis əlaqə
+
+Real-time sistemlər (məsələn, çat tətbiqləri)
+
+Mobil və IoT cihazlarla sürətli əlaqə
+
+Performansın kritik olduğu sistemlər
+
+
+-----------------------Praktika hissesi-----------------------------------------------------
+Paketler:
+1. Grpc.AspNetCore
+İstifadə: Bu paket ASP.NET Core ilə gRPC xidmətləri qurmağa imkan verir.
+
+Funksiya: gRPC serverini yaratmağa və onu ASP.NET Core tətbiqinə əlavə etməyə kömək edir. Grpc.AspNetCore ASP.NET Core ilə gRPC istifadə etmək üçün lazım olan server və müştəri komponentlərini təmin edir.
+
+Üstünlük: ASP.NET Core ilə asanlıqla gRPC xidmətləri qurmağa imkan verir, yəni web tətbiqlərinizdə gRPC istifadə etmək üçün lazım olan hər şeyi təmin edir.
+
+2. Grpc.Tools
+İstifadə: Bu paket Protobuf fayllarından (.proto) kodları avtomatik yaratmaq üçün istifadə olunur.
+
+Funksiya: .proto fayllarını istifadə edərək gRPC xidmətləri üçün lazımi C# siniflərini yaratmaq üçün lazımlı alətləri təmin edir. Bu, gRPC servislərinizi avtomatik olaraq C# dilində istifadə oluna bilən siniflərə çevirməyə imkan verir.
+
+Üstünlük: .proto faylını yazdıqdan sonra, bu paket vasitəsilə gRPC xidmətlərinin istifadə edilə bilən C# versiyalarını asanlıqla yarada bilərsiniz.
+
+3. Grpc.Net.Client
+İstifadə: Bu paket gRPC müştəri tətbiqləri üçün istifadə olunur.
+
+Funksiya: Serverə sorğular göndərmək və serverdən cavablar almaq üçün lazımlı alətləri təmin edir. gRPC serverinə qoşulmaq və gRPC əməliyyatları həyata keçirmək üçün bu paket istifadə olunur.
+
+Üstünlük: Serverə gRPC sorğuları göndərmək üçün lazımlı olan alətləri təmin edir. Əsasən, gRPC müştərisi yaratmaq üçün istifadə olunur.
+
+4. Google.Protobuf
+İstifadə: Bu paket Protobuf (Protocol Buffers) verilən formatını istifadə etmək üçün lazımlıdır.
+
+Funksiya: Verilənlərin marşrutlaşdırılmasında və ötürülməsində istifadə olunan Protobuf formatını serializasiya və deserializasiya etmək üçün alətləri təmin edir. GRPC, Protobuf formatında məlumat ötürür, bu paket isə bu məlumatları doğru şəkildə oxumaq və yazmaq üçün lazımlıdır.
+
+Üstünlük: Protobuf məlumatlarını işləmək və serializasiya/deserializasiya etmək üçün bu paket zəruridir.
+
+Qısa Xülasə:
+Grpc.AspNetCore: gRPC serverini ASP.NET Core ilə inteqrasiya edir.
+
+Grpc.Tools: .proto fayllarını C# kodlarına çevirir.
+
+Grpc.Net.Client: gRPC müştəri tətbiqi üçün istifadə olunur.
+
+Google.Protobuf: Protobuf verilən formatını işləməyə imkan verir.
+
+
+
+
+Bu, .csproj (C# project file) faylında Protobuf faylını əlavə etmək üçün istifadə olunan bir ItemGroup konfiqurasiyasıdır
+<ItemGroup>
+	<Protobuf Include="Protos\platforms.proto" GrpcServices="Server" />
+</ItemGroup>
+Bu konfiqurasiya ilə platforms.proto Protobuf faylını C# layihəsinə əlavə edirsiniz və onu gRPC serveri üçün istifadə edirsiniz. Bu fayldan GrpcPlatform xidmətini yaratmaq və müvafiq C# sinifləri ilə server tərəfini inkişaf etdirmək mümkün olacaq.
