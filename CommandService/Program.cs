@@ -16,7 +16,7 @@ builder.Services.AddScoped<ICommandRepo, CommandRepo>();
 builder.Services.AddScoped<IPlatformDataClient,PlatformDataClient>();
 builder.Services.AddSingleton<IEventProcessor, EventProcessor>();
 builder.Services.AddHostedService<MessageBusSubscriber>();
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMemory"));
 
 var app = builder.Build();
 
