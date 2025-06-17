@@ -23,7 +23,7 @@ namespace CommandService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<CommandReadDto>> GetCommandsForPLatform(int platformId)
         {
-            Console.WriteLine($"--> Hit GetCommandsForPLatform:{platformId}");
+            Console.WriteLine($"----> Hit GetCommandsForPLatform:{platformId}");
 
             if (!_commandRepo.PlatformExits(platformId))
             {
