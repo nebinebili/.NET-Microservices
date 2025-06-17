@@ -37,7 +37,7 @@ namespace CommandService.Controllers
         [HttpGet("{commandId}",Name ="GetCommandForPlatform")]
         public ActionResult<CommandReadDto> GetCommandForPlatform(int platformId,int commandId)
         {
-            Console.WriteLine($"--> Hit GetCommandForPLatform:{platformId}/{commandId}");
+            Console.WriteLine($"----> Hit GetCommandForPLatform:{platformId}/{commandId}");
 
             if (!_commandRepo.PlatformExits(platformId))
             {
