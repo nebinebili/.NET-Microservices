@@ -47,7 +47,7 @@ namespace PlatformService.Controllers
                 return data != null ? Ok(_mapper.Map<PlatformReadDto>(data)) : NotFound();
             }
 
-            return BadRequest("Id is not validd");
+            return BadRequest("Id is not valid");
         }
         [HttpPost("CreatePlatform")]
         public async Task<ActionResult<PlatformReadDto>> CreatePlatform(PlatformCreateDto platformCreateDto)
