@@ -65,7 +65,7 @@ namespace PlatformService.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"-----> Could not send synchronously:{ex.Message}");
+                Console.WriteLine($"----> Could not send synchronously:{ex.Message}");
             }
 
             /// Send Async Message
