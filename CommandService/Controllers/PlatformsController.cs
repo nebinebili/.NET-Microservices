@@ -22,7 +22,7 @@ namespace CommandService.Controllers
         [HttpGet("GetPlatforms")]
         public ActionResult<IEnumerable<PlatformReadDto>> GetPLatforms()
         {
-            Console.WriteLine("----> Getting Platforms from CommandServices");
+            Console.WriteLine("-----> Getting Platforms from CommandServices");
 
             var platformItems=_commandRepo.GetAllPlatforms();
 
